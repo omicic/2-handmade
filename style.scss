@@ -6,7 +6,7 @@ variables
 $font-family: 'Quicksand', sans-serif;
 $font: 16px;
 $primary: #ffffff;
-$font-color:$font #161616;
+$font-color:#161616;
 $orange: #f59a23;
 $darkerorange: #6d5535;
 $gray:  #e7e4e4;
@@ -24,15 +24,16 @@ mixins
     flex-direction: $direction;
 }
 
-@mixin btn {
+@mixin btn{
     padding: 15px 40px;
     background: $orange;
-    color: $white;
+    color: $primary;
     font-size: 1rem;
     margin: 10px 10px;
-
+    border: none;
     &:hover {
         opacity: .5;
+        color:$font-color;
         cursor: pointer;
         transition: $transition;
     }
@@ -67,6 +68,7 @@ p{
     font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 400;
+    padding: 20px 0;
 }
 
 ul {
@@ -84,7 +86,7 @@ a {
 
 hr {
     color: $orange;
-    width: 15%;
+    width: 100px;
     margin: 30px auto;
 }
 
@@ -140,6 +142,33 @@ hr {
         padding: $padding;
         h2{
             font-size: 3rem;
+        }
+    }
+}
+
+/***whatcanIdo***/
+.whatcanIdo {
+    text-align: center;
+    padding: $padding;
+
+    h3{
+        font-size: 2rem;
+    }
+
+    article{
+        @include flex(space-between, center, row);
+
+        div{
+            flex: 0 0 30%;
+            
+            h4{
+                font-size: 1.5rem;
+            }
+            button {
+                @include btn;
+                text-transform: uppercase;
+            }
+
         }
     }
 }
