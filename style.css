@@ -34,7 +34,7 @@ h6 {
 p {
   font-size: 1rem;
   letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 500;
   padding: 20px 0;
 }
 
@@ -61,6 +61,11 @@ hr {
 .container {
   width: 80%;
   margin: auto;
+}
+
+img {
+  width: 100%;
+  padding: 30px 0;
 }
 
 /***header***/
@@ -143,16 +148,16 @@ hr {
 }
 
 /***whatcanIdo***/
-.whatcanIdo {
+.whatcanIdo .container, .myworks .container {
   text-align: center;
   padding: 50px 0;
 }
 
-.whatcanIdo h3 {
+.whatcanIdo .container h3, .myworks .container h3 {
   font-size: 2rem;
 }
 
-.whatcanIdo article {
+.whatcanIdo .container article, .myworks .container article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,17 +176,17 @@ hr {
           flex-direction: row;
 }
 
-.whatcanIdo article div {
+.whatcanIdo .container article div, .myworks .container article div {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
 }
 
-.whatcanIdo article div h4 {
+.whatcanIdo .container article div h4, .myworks .container article div h4 {
   font-size: 1.5rem;
 }
 
-.whatcanIdo article div button {
+.whatcanIdo .container article div button, .myworks .container article div button {
   padding: 15px 40px;
   background: #f59a23;
   color: #ffffff;
@@ -191,11 +196,44 @@ hr {
   text-transform: uppercase;
 }
 
-.whatcanIdo article div button:hover {
+.whatcanIdo .container article div button:hover, .myworks .container article div button:hover {
   opacity: .5;
   color: #161616;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+
+/***myworks***/
+.myworks {
+  background-color: #e7e4e4;
+}
+
+.myworks .container article div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 22%;
+          flex: 0 0 22%;
+}
+
+/***footer***/
+footer {
+  background-color: #686464;
+  text-align: center;
+  padding: 50px 0;
+  color: #ffffff;
+}
+
+footer p {
+  font-weight: 700;
+}
+
+footer i:nth-child(2) {
+  color: red;
+}
+
+footer .icons i {
+  margin-left: 20px;
+  color: #f59a23;
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=style.css.map */

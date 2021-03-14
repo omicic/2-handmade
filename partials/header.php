@@ -12,7 +12,6 @@
 
 <body>
 
-
     <header class="mainHeader">
         <h1>Handmade</h1>
         <nav>

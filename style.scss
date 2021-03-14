@@ -10,6 +10,7 @@ $font-color:#161616;
 $orange: #f59a23;
 $darkerorange: #6d5535;
 $gray:  #e7e4e4;
+$darkgray:  #686464;
 $padding: 50px 0;
 $transition: .3s ease;
 
@@ -67,7 +68,7 @@ h6 {
 p{
     font-size: 1rem;
     letter-spacing: 1px;
-    font-weight: 400;
+    font-weight: 500;
     padding: 20px 0;
 }
 
@@ -93,6 +94,11 @@ hr {
 .container {
     width: 80%;
     margin: auto;
+}
+
+img{
+    width: 100%;
+    padding: 30px 0;
 }
 
 /***header***/
@@ -148,27 +154,69 @@ hr {
 
 /***whatcanIdo***/
 .whatcanIdo {
+    .container{
+        text-align: center;
+        padding: $padding;
+    
+        h3{
+            font-size: 2rem;
+        }
+    
+        article{
+            @include flex(space-between, center, row);
+    
+            div{
+                flex: 0 0 30%;
+                
+                h4{
+                    font-size: 1.5rem;
+                }
+                button {
+                    @include btn;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+/***myworks***/
+.myworks{
+    background-color: $gray;
+    @extend .whatcanIdo;
+    .container {
+        article{
+            div{
+                flex: 0 0 22%;
+                img {
+
+                }
+            }
+        }
+    }
+}
+
+/***footer***/
+footer {
+    background-color: $darkgray;
     text-align: center;
     padding: $padding;
-
-    h3{
-        font-size: 2rem;
+    color: $primary;
+    
+    p{
+        font-weight: 700;
     }
 
-    article{
-        @include flex(space-between, center, row);
-
-        div{
-            flex: 0 0 30%;
-            
-            h4{
-                font-size: 1.5rem;
-            }
-            button {
-                @include btn;
-                text-transform: uppercase;
-            }
-
+    i:nth-child(2){
+        color: red;
+    }
+    .icons{
+       
+        i{
+            margin-left: 20px;
+            color: $orange;
+            font-size: 1.3rem;
         }
+      
     }
 }
