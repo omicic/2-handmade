@@ -80,11 +80,6 @@ ul {
 
 a {
     text-decoration: none;
-
-    &:hover {
-        color: $darkerorange;
-        transition: $transition;
-    }
 }
 
 hr {
@@ -146,11 +141,16 @@ img {
                 @media(max-width:766px){
                     font-size: 1rem;
                     margin: 5px 20px;
+                }  
+
+                color: $primary;
+                cursor: pointer;
+                &:hover {
+                    transition: $transition;
+                    color: $darkerorange;
                 }
             }
         }
-
-
     }
 }
 
