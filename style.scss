@@ -3,14 +3,15 @@
 /*********
 variables
 *********/
-$font-family: 'Quicksand', sans-serif;
+$font-family: 'Quicksand',
+sans-serif;
 $font: 16px;
 $primary: #ffffff;
 $font-color:#161616;
 $orange: #f59a23;
 $darkerorange: #6d5535;
-$gray:  #e7e4e4;
-$darkgray:  #686464;
+$gray: #e7e4e4;
+$darkgray: #686464;
 $padding: 50px 0;
 $transition: .3s ease;
 
@@ -25,16 +26,17 @@ mixins
     flex-direction: $direction;
 }
 
-@mixin btn{
+@mixin btn {
     padding: 15px 40px;
     background: $orange;
     color: $primary;
     font-size: 1rem;
     margin: 10px 10px;
     border: none;
+
     &:hover {
         opacity: .5;
-        color:$font-color;
+        color: $font-color;
         cursor: pointer;
         transition: $transition;
     }
@@ -65,7 +67,7 @@ h6 {
     font-weight: 600;
 }
 
-p{
+p {
     font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 500;
@@ -96,7 +98,7 @@ hr {
     margin: auto;
 }
 
-img{
+img {
     width: 100%;
     padding: 30px 0;
 }
@@ -108,9 +110,11 @@ img{
     background-size: cover;
     height: 600px;
     @include flex(center, flex-start, column);
+    @media(max-width:766px){
+        height: 500px;
+    }
 
     h1 {
-
         color: $primary;
         font-size: 4rem;
         margin-left: 50px;
@@ -118,12 +122,19 @@ img{
         text-align: center;
         padding: 10px 40px;
         margin-bottom: 20px;
+        @media(max-width:766px){
+            font-size: 3rem;
+            margin-top: 200px;
+        }
     }
 
     nav {
         background: $orange;
         color: $primary;
         margin-left: 50px;
+        @media(max-width:766px){
+            margin-left: 50px;
+        }
 
         ul {
             @include flex(space-between, center, row);
@@ -132,6 +143,10 @@ img{
                 margin: 10px 40px;
                 font-size: 1.5rem;
                 text-align: center;
+                @media(max-width:766px){
+                    font-size: 1rem;
+                    margin: 5px 20px;
+                }
             }
         }
 
@@ -140,13 +155,15 @@ img{
 }
 
 /***welcome***/
-.welcome  {
+.welcome {
     background-color: $gray;
-    .container{
+
+    .container {
 
         text-align: center;
         padding: $padding;
-        h2{
+
+        h2 {
             font-size: 3rem;
         }
     }
@@ -154,23 +171,31 @@ img{
 
 /***whatcanIdo***/
 .whatcanIdo {
-    .container{
+    .container {
         text-align: center;
         padding: $padding;
-    
-        h3{
+
+        h3 {
             font-size: 2rem;
         }
-    
-        article{
+
+        article {
             @include flex(space-between, center, row);
-    
-            div{
+            @media(max-width:766px){
+                @include flex(space-between, center, column);
+            }
+            div {
                 flex: 0 0 30%;
-                
-                h4{
-                    font-size: 1.5rem;
+                @media(max-width:766px){
+                    flex: 1;
                 }
+                h4 {
+                    font-size: 1.5rem;
+                    @media(max-width:766px){
+                        padding-top: 30px;;
+                    }
+                }
+
                 button {
                     @include btn;
                     text-transform: uppercase;
@@ -181,15 +206,23 @@ img{
 }
 
 /***myworks***/
-.myworks{
+.myworks {
     background-color: $gray;
     @extend .whatcanIdo;
-    .container {
-        article{
-            div{
-                flex: 0 0 22%;
-                img {
 
+    .container {
+        article {
+            div {
+                flex: 0 0 22%;
+                h4 {
+                    @media(max-width:766px){
+                        padding-top: 10px;;
+                    }
+                }
+                img{
+                    @media(max-width:766px){
+                        padding-top: 50px;;
+                    }
                 }
             }
         }
@@ -202,21 +235,22 @@ footer {
     text-align: center;
     padding: $padding;
     color: $primary;
-    
-    p{
+
+    p {
         font-weight: 700;
     }
 
-    i:nth-child(2){
+    i:nth-child(2) {
         color: red;
     }
-    .icons{
-       
-        i{
+
+    .icons {
+
+        i {
             margin-left: 20px;
             color: $orange;
-            font-size: 1.3rem;
+            font-size: 2rem;
         }
-      
+
     }
 }

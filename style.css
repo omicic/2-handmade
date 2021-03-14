@@ -92,6 +92,12 @@ img {
           flex-direction: column;
 }
 
+@media (max-width: 766px) {
+  .mainHeader {
+    height: 500px;
+  }
+}
+
 .mainHeader h1 {
   color: #ffffff;
   font-size: 4rem;
@@ -102,10 +108,23 @@ img {
   margin-bottom: 20px;
 }
 
+@media (max-width: 766px) {
+  .mainHeader h1 {
+    font-size: 3rem;
+    margin-top: 200px;
+  }
+}
+
 .mainHeader nav {
   background: #f59a23;
   color: #ffffff;
   margin-left: 50px;
+}
+
+@media (max-width: 766px) {
+  .mainHeader nav {
+    margin-left: 50px;
+  }
 }
 
 .mainHeader nav ul {
@@ -131,6 +150,13 @@ img {
   margin: 10px 40px;
   font-size: 1.5rem;
   text-align: center;
+}
+
+@media (max-width: 766px) {
+  .mainHeader nav ul li {
+    font-size: 1rem;
+    margin: 5px 20px;
+  }
 }
 
 /***welcome***/
@@ -176,14 +202,49 @@ img {
           flex-direction: row;
 }
 
+@media (max-width: 766px) {
+  .whatcanIdo .container article, .myworks .container article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: wrap;
+        -ms-flex-positive: wrap;
+            flex-grow: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .whatcanIdo .container article div, .myworks .container article div {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
           flex: 0 0 30%;
 }
 
+@media (max-width: 766px) {
+  .whatcanIdo .container article div, .myworks .container article div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
 .whatcanIdo .container article div h4, .myworks .container article div h4 {
   font-size: 1.5rem;
+}
+
+@media (max-width: 766px) {
+  .whatcanIdo .container article div h4, .myworks .container article div h4 {
+    padding-top: 30px;
+  }
 }
 
 .whatcanIdo .container article div button, .myworks .container article div button {
@@ -215,6 +276,18 @@ img {
           flex: 0 0 22%;
 }
 
+@media (max-width: 766px) {
+  .myworks .container article div h4 {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 766px) {
+  .myworks .container article div img {
+    padding-top: 50px;
+  }
+}
+
 /***footer***/
 footer {
   background-color: #686464;
@@ -234,6 +307,6 @@ footer i:nth-child(2) {
 footer .icons i {
   margin-left: 20px;
   color: #f59a23;
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
