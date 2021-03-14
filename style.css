@@ -84,6 +84,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-bottom: 10px solid #aaa;
 }
 
 @media (max-width: 766px) {
