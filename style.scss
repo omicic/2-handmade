@@ -165,6 +165,9 @@ img {
 
         h2 {
             font-size: 3rem;
+            @media(max-width:766px){
+                font-size: 2.5rem;
+            }
         }
     }
 }
