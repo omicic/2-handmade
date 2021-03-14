@@ -9,6 +9,7 @@ $primary: #ffffff;
 $font-color:$font #161616;
 $orange: #f59a23;
 $darkerorange: #6d5535;
+$gray:  #e7e4e4;
 $padding: 50px 0;
 $transition: .3s ease;
 
@@ -49,7 +50,8 @@ basic style
 body {
     font-family: $font-family;
     font-size: $font;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: $font-color;
 }
 
 h1,
@@ -59,6 +61,12 @@ h4,
 h5,
 h6 {
     font-weight: 600;
+}
+
+p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
 
 ul {
@@ -72,6 +80,12 @@ a {
         color: $darkerorange;
         transition: $transition;
     }
+}
+
+hr {
+    color: $orange;
+    width: 15%;
+    margin: 30px auto;
 }
 
 .container {
@@ -114,5 +128,18 @@ a {
         }
 
 
+    }
+}
+
+/***welcome***/
+.welcome  {
+    background-color: $gray;
+    .container{
+
+        text-align: center;
+        padding: $padding;
+        h2{
+            font-size: 3rem;
+        }
     }
 }
